@@ -36,7 +36,7 @@ inline std::shared_ptr<spdlog::logger> create(std::string logger_name, SinkArgs 
                                          std::forward<SinkArgs>(sink_args)...);
 }
 
-// Initialize and register a logger,
+// ModuleStartup and register a logger,
 // formatter and flush level will be set according the global settings.
 //
 // Useful for initializing manually created loggers with the global settings.
@@ -136,7 +136,7 @@ SPDLOG_API spdlog::logger *default_logger_raw();
 
 SPDLOG_API void set_default_logger(std::shared_ptr<spdlog::logger> default_logger);
 
-// Initialize logger level based on environment configs.
+// ModuleStartup logger level based on environment configs.
 //
 // Useful for applying SPDLOG_LEVEL to manually created loggers.
 //
